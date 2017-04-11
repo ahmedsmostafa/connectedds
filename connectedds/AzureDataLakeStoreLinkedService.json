@@ -1,0 +1,16 @@
+{
+  "name": "AzureDataLakeStoreLinkedService",
+  "properties": {
+    "description": "Connected Data Scientist Data Lake Store",
+    "type": "AzureDataLakeStore",
+    "typeProperties": {
+      "dataLakeStoreUri": "adl://connectedds.azuredatalakestore.net",
+      "accountName": "connectedds",
+      "authorization": "**********",
+      "sessionId": "**********",
+      "subscriptionId": "1dd5056c-6a51-444e-bd24-6f2b2b2815fb",
+      "resourceGroupName": "connecteddatascientist"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json"
+}

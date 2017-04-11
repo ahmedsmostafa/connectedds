@@ -1,0 +1,11 @@
+{
+  "name": "AzureStorageLinkedService",
+  "properties": {
+    "description": "Connected Data Scientist StorageAccount",
+    "type": "AzureStorage",
+    "typeProperties": {
+      "connectionString": "DefaultEndpointsProtocol=https;AccountName=connecteddsstorage;AccountKey=**********"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json"
+}

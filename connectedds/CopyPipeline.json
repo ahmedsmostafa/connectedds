@@ -1,0 +1,49 @@
+{
+  "name": "CopyPipeline",
+  "properties": {
+    "description": "Copy Data From one Location to Another",
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "BlobSource",
+            "treatEmptyAsNull": true
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "FoodInspectionInput"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AzureDataLakeFoodInspectionOutput"
+          }
+        ],
+        "policy": {
+          "timeout": "10:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "retry": 1
+        },
+        "scheduler": {
+          "frequency": "Hour",
+          "interval": 1
+        },
+        "name": "EgressDataLake",
+        "description": "Move data from blob to azure data lake"
+      }
+    ],
+    "start": "2017-04-11T00:00:00Z",
+    "end": "2017-05-05T00:00:00Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

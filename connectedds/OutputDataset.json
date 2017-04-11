@@ -1,0 +1,21 @@
+{
+  "name": "OutputDataset",
+  "properties": {
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "AzureStorageLinkedService",
+    "typeProperties": {
+      "fileName": "adfoutput.txt",
+      "folderPath": "connecteddscontainer/adfoutput/output/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": "\t"
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

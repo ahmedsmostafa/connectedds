@@ -1,0 +1,21 @@
+{
+  "name": "FoodInspectionInput",
+  "properties": {
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "AzureStorageLinkedService",
+    "typeProperties": {
+      "fileName": "Food_Inspections1.csv",
+      "folderPath": "connecteddscontainer/HdiSamples/HdiSamples/FoodInspectionData/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}
