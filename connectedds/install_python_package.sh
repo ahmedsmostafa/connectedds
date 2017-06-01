@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-pip install -U setuptools
-pip install -U cuckoo
+sudo pip install -U setuptools
+sudo pip install -U cuckoo
